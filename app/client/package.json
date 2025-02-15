@@ -1,0 +1,20 @@
+{
+  "name": "redom-deom-client",
+  "type": "module",
+  "scripts": {
+    "start": "npx rollup -c rollup.config.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "redom": "^4.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-redom-jsx": "^3.0.6",
+    "rollup": "^4.24.3"
+  }
+}
