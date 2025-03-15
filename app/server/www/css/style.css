@@ -17,20 +17,6 @@ body {
 
 .container {
     flex-direction: column;
-    margin: 20% 40% 20% 40%;
     align-items: center;
     justify-content: center;
-}
-
-.container .form{
-    display: flex;
-    position: relative;
-}
-
-.title {
-    font-size: 30px;
-}
-
-input {
-    font-size: 20px; 
 }

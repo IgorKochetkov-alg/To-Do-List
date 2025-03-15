@@ -1,0 +1,4 @@
+**/node_modules
+package-lock.json
+app/server/www/js/*.js
+!app/server/www/js/bootstrap.bundle.min.js
