@@ -1,9 +1,9 @@
 import { mount, el } from '../node_modules/redom/dist/redom.es';
-import LoginFrom from './widget/loginFrom'
+import LoginForm from './widget/loginForm'
 
-const lang = 'ru'; // 'ru', 'en'
+const langId = 'ru'; // 'ru', 'en'
 
 mount(
     document.getElementById('main'),
-    <LoginFrom />
+    <LoginForm langId={langId}/>
 );

@@ -14,12 +14,30 @@ export default class Link {
         this.el = this._ui_render();
     }
 
+    updateLabel = (label) => {
+        if (typeof label === 'string') {
+            this._el_label.innerText = label;
+        } else {
+            this._el_label = mount(this.el, label, this._el_label, true);
+        }
+
+    }
+
     _ui_render = () => {
         const { label, link } = this._prop;
         return (
             <div>
-                <a href={link}> {label}</a>
+                <a this='_ui_a' href={link}> {label}</a>
             </div>
         )
+    }
+
+    updateLabel = (label) => {
+        if (typeof label === 'string') {
+            this._ui_a.innerText = label;
+        } else {
+            this._ui_a = mount(this.el, label, this._ui_a, true);
+        }
+
     }
 }

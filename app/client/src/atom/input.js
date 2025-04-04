@@ -4,24 +4,35 @@ export default class Input {
     constructor(settings = {}) {
         const {
             label = '',
-            input_type = 'text',
         } = settings;
 
         this._prop = {
             label,
-            input_type,
         }
         this.el = this._ui_render();
     }
 
+    updateLabel = (label) => {
+        if (typeof label === 'string') {
+            this._el_label.innerText = label;
+        } else {
+            this._el_label = mount(this.el, label, this._el_label, true);
+        }
+
+    }
+
     _ui_render = () => {
-        const { label, input_type } = this._prop;
+        const { label } = this._prop;
         return (
-            <div>
-                <label className="form-label">{label}
-                    <input type={input_type} className="form-control" />
-                </label>
-            </div>
+            <label className="form-label">
+                <span this='_el_label'>{label}</span>
+                <input this='_el_input' type="text" className="form-control" />
+            </label>
         )
     }
+
+    getValue = () => {
+        console.log(this._el_input.value);
+        return this._el_input.value;
+    };
 }
